@@ -1,0 +1,84 @@
+html {
+}
+
+body{
+/*	margin: 0;
+	padding: 0;
+*/	background: url("http://www.travelandleisure.com/sites/default/files/styles/1600x1000/public/la0915-food-5833.jpg?itok=qxKPrYTL");
+	background-repeat: no-repeat;
+	background-size: cover;
+	font-size: 16px;
+	font-family: sans-serif;
+	background-color: black;
+}
+
+.nav {
+	display: block;
+	height: 200px;
+	background-color: rgba(153, 255, 153, 0.7);
+	list-style-type: none;
+	padding: 0;
+	border-radius: .125em;
+}
+.nav a {
+	color: #444;
+	text-decoration: none;
+}
+.nav-item {
+	margin-top: 10px;
+	padding: .5em;
+
+
+	border: 2px solid black;
+	/*border-left: 1px solid #BBB;*/
+	box-shadow: 0 -.15em 0 rgba(0, 0, 0, .1) inset;
+}
+
+.dropdown {
+	display: inline-block;
+	position: relative;
+	width: 100px;
+}
+
+.dropdown a {
+	color: #444;
+	text-decoration: none;
+}
+
+.vegetarien {
+	float: left;
+	margin-left: 20px;
+}
+.pasta{
+	margin-right: 20px;
+	float: right;
+}
+.burger{
+	margin: auto;
+}
+.dropdown-items {
+	display: none;
+	z-index: 10;
+	list-style-type: none;
+	position: absolute;
+	top: 100%;
+	margin-top: -1px;
+	padding: 0;
+
+	background: white;
+	border: 1px solid #BBB;
+
+	box-shadow: 0 1px .5em rgba(0, 0, 0, .2);
+	border-radius: 2px;
+}
+.dropdown-items > li {
+	padding: .5em 1em;
+	white-space: nowrap;
+}
+.dropdown-items > li:hover {
+	background-color: #EEE;
+}
+
+.dropdown:hover .dropdown-items {
+	display: block;
+}

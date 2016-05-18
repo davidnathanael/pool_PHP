@@ -1,0 +1,3 @@
+0000000000000000000000000000000000000000 eb8eefcabc3f63170ca6825f383a8f943f5bb278 David Nathanael <ddela-cr@student.42.fr> 1460393590 +0200	commit (initial): Added 00 to 12
+eb8eefcabc3f63170ca6825f383a8f943f5bb278 aa69d83ff338500bcb41879b1e65f94c9b8c9d00 David Nathanael <ddela-cr@student.42.fr> 1460484812 +0200	commit: Added to 19
+aa69d83ff338500bcb41879b1e65f94c9b8c9d00 f762b7c66f4cc5d16b6474ff040af355b0505804 David Nathanael <ddela-cr@student.42.fr> 1460484986 +0200	commit: Deleted base_student.sql

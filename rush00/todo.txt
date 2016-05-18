@@ -1,0 +1,32 @@
+users :
+
+- login
+- pass
+- nom
+- prenom
+- adresse
+- code postal
+- ville
+- addresse mail
+- role
+
+articles :
+
+- id
+- nom
+- stock
+- image
+- categorie
+- description
+- prix
+
+archive :
+
+- id
+- acheteur
+- objets => objet
+			- id objet
+			- quantite
+- total
+
+

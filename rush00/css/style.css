@@ -1,0 +1,574 @@
+/* ====== Rush ecommerce @42 - qmerlot & ddela-cr ====== */
+
+*{
+	box-sizing: border-box;
+}
+
+.clearfix{
+	overflow:auto;
+	zoom:1;
+}
+
+a{
+	text-decoration: none;
+	color:#51B1CF;
+}
+
+a:hover{
+	color:#3E94AD;
+}
+
+body{
+	background:#444;
+	font-family: "Open Sans", Helvetica, Arial, sans-serif;
+	font-size: 12px;
+	min-width: 320px;
+}
+
+.wrapper{
+	padding:0 20px;
+	max-width: 960px;
+	margin:auto;
+}
+
+/* =============== HEADER ================
+   ======================================= */
+
+header{
+	height:320px;
+	background-image:url(../img/skyrim.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: 50% 0%;
+	position:relative;
+}
+
+header .title{
+	min-height:60px;
+	background-color:rgba(255,255,255,0.6);
+	padding:0 20px;
+	vertical-align: bottom;
+}
+
+header h1,
+header h2{
+	text-align: center;
+	overflow: hidden;
+	color:rgba(0,0,0,0.8);
+	position:relative;
+	z-index: 2;
+	margin:none;
+	line-height: 60px;
+	margin:0;
+}
+
+header h1{
+	font-size:1.6em;
+	margin-right:20px;
+}
+
+header h1 a{
+	color:rgba(0,0,0,0.8);
+}
+
+header h2{
+	font-size:1em;
+}
+
+header .khajit{
+	width:150px;
+	height:150px;
+	background-image: url(../img/khajit.png);
+	background-size: 100% auto;
+	background-position: top;
+	background-repeat:no-repeat;
+	position:absolute;
+	bottom:0;
+}
+
+/* ================ MENU =================
+   ======================================= */
+
+#menu{
+	background:#fff;
+	height: 60px;
+	box-shadow: 0 0 10px rgba(0,0,0,0.2);
+	position: relative;
+	z-index: 10;
+	border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+#menu a{
+	color:rgba(0,0,0,0.9);
+	display:block;
+	height:60px;
+	line-height: 60px;
+	float:left;
+	padding:0 22px;
+	font-weight: bold;
+}
+
+#menu a.home{
+	border-right:1px solid rgba(0,0,0,0.1);
+}
+
+#menu .parent{
+	position:relative;
+}
+
+#menu .parent .articles{
+	color:rgba(0,0,0,0.9);
+	display:block;
+	height:60px;
+	line-height: 60px;
+	float:left;
+	padding:0 22px;
+	font-weight: bold;
+	border-right: 1px solid rgba(0,0,0,0.1);
+}
+
+#menu .parent .articles:hover{
+	background:rgba(0,0,0,0.05);
+	cursor:pointer;
+}
+
+#menu .parent .children{
+	display:none;
+}
+
+#menu i{
+	font-size:1.2em;
+}
+
+#menu a:hover{
+	background:rgba(0,0,0,0.05);
+}
+
+#menu span{
+	margin-left:10px;
+	display:none;
+}
+
+#menu .login,
+#menu .cart{
+	float:right;
+	border-right:0px;
+	border-left:1px solid rgba(0,0,0,0.1);
+}
+
+@media only screen and (max-width: 899px) {
+	#menu .parent:hover .children{
+		display:block;
+		position:absolute;
+		top:60px;
+		background: #ffffff;
+		cursor:pointer;
+		box-shadow: 0 5px 5px rgba(0,0,0,0.1);
+		width:320px;
+	}
+	
+	#menu .parent .articles span{
+		display: initial;	
+	}
+
+	#menu .parent:hover .children a{
+		float:none;
+		border-right:0;
+		border-bottom: 1px solid rgba(0,0,0,0.1);
+		text-align: center;
+		width:320px;
+	}
+
+	#menu .parent:hover .children a:last-child{
+		border-bottom:0;
+	}
+}
+
+@media only screen and (min-width: 900px) {
+	body{
+		font-size: 13px;
+	}
+	
+	header h1{
+		float:left;
+	}
+
+	header h2{
+		float:right;
+	}
+	
+	header .khajit{
+		width:250px;
+		height:250px;
+	}
+	
+	#menu span{
+		display:initial;
+	}
+	
+	#menu a{
+		border-right:1px solid rgba(0,0,0,0.1);
+	}
+	
+	#menu .parent .articles{
+		display:none;
+	}
+	
+	#menu .parent .children{
+		display:initial;
+	}
+}
+
+
+/* =============== CONTENT ===============
+   ======================================= */
+
+main{
+	padding:40px 20px 20px;
+	position: relative;
+	min-height: 200px;
+	background:#eee;
+}
+
+footer{
+	background:#444;
+	color:rgba(255,255,255,0.8);
+	text-align:center;
+	padding:5px 0 8px;
+}
+
+.box{
+	background:#fff;
+	border-radius: 4px;
+	padding:20px;
+	margin: 0 auto 40px;
+	position: relative;
+}
+
+.box.large{
+	max-width: 600px;
+}
+
+.box.login{
+	text-align: center;
+	box-shadow: 0 5px 5px rgba(0,0,0,0.1);
+}
+
+.box.login small{
+	margin-bottom: 10px;
+	display: block;
+}
+
+.box.success,
+.box.ok,
+.box.home,
+.box.warning{
+	color:#fff;
+	font-size:1.2em;
+}
+
+.box.ok,
+.box.home{
+	background:#51B1CF;
+}
+
+.box.warning{
+	background:#D66B54;
+}
+
+.box.success{
+	background:#84BF60;
+}
+
+.box.warning a{
+	color:rgba(0,0,0,0.8);
+}
+
+.box.warning a:hover{
+	color:rgba(0,0,0,0.9);
+}
+
+.box p{
+	margin:0;
+}
+
+.box h3{
+	margin:0 0 1em;
+}
+
+.box.cat{
+	position: relative;
+	height: 140px;
+	font-size: 1.2em;
+	overflow: hidden;
+	color:#fff;
+	background: #51B1CF;
+}
+
+.box.cat .imgcat{
+	width:140px;
+	height:140px;
+	position: absolute;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 50% 50%;
+	left:0;
+	top:0;
+	bottom:0;
+	display:none;
+}
+
+.items{
+	text-align: center;
+}
+
+.box.item{
+	box-shadow: 0 5px 5px rgba(0,0,0,0.1);
+	display: block;
+	position:relative;
+	color:#fff;
+	background-repeat: no-repeat;
+	background-size:cover;
+	background-position: 50% 50%;
+}
+
+.box.item .inner{
+	position:relative;
+}
+
+.box.item .catitle{
+	position:absolute;
+	height:60px;
+	background:rgba(0,0,0,0.4);
+	bottom:0;
+	text-align:center;
+	left:0;
+	right:0;
+	border-radius:0 0 4px 4px;
+	line-height: 60px;
+	font-size:1.5em;
+	font-weight: bold;
+	z-index: 20;
+}
+
+.box.cat.catarmes .imgcat,
+.box.item.armes{
+	background-image: url(../img/weapons.jpg);
+}
+
+.box.cat.catarmures .imgcat,
+.box.item.armures{
+	background-image: url(../img/armors.jpg);
+}
+
+.box.cat.catconsommables .imgcat,
+.box.item.consommables{
+	background-image: url(../img/food.png);
+}
+
+.box.item.catitem{
+	background-image: url(../img/catarmes.jpg);
+}
+
+.box.item.catitem::after{
+	position: absolute;
+	top:0;
+	bottom:0;
+	left:0;
+	right: 0;
+	content:" ";
+	background: rgba(255,255,255,0.75);
+	display: block;
+	z-index: 1;
+}
+
+.box.item .cat > *{
+	z-index: 2;
+}
+
+.box .itemimage{
+	position: absolute;
+	top:20px;
+	bottom:20px;
+	left:20px;
+	right: 20px;
+	background-size: contain;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	z-index: 10;
+}
+
+.box.catitem .prix{
+	position: absolute;
+	width:80px;
+	height: 80px;
+	z-index: 20;
+	background-image: url(../img/gold.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: 50% 50%;
+	text-align: center;
+	line-height: 80px;
+	font-weight: bold;
+	font-size:1.4em;
+	text-shadow: 2px 2px 2px rgba(0,0,0,0.75);
+	top:-20px;
+	left:-20px;
+	opacity:0.95;
+}
+
+.box h2{
+	margin:0 0 20px;
+}
+
+.box.itemdetails p{
+	margin:0 0 1.4em 0;
+}
+
+.stock.warning{
+	color:#D66B54;
+}
+
+@media only screen and (max-width: 899px) {
+	.box.item{
+		position:relative;
+		width:100%;
+		height:0px;
+		padding-bottom:80%;
+		padding-top: 50px;
+	}
+	
+	.box.item .inner{
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left:0;
+		right:0;
+	}
+}
+
+@media only screen and (min-width: 900px) {
+	.box.item{
+		width:240px;
+		height:240px;
+		display:inline-block;
+		margin:0 10px 20px;
+	}
+	
+	.box.cat{
+		padding-left:160px;
+	}
+	
+	.box.cat .imgcat{
+		display:block;
+	}
+}
+
+@media only screen and (min-width: 950px) {
+	.box.item{
+		width:260px;
+		height:260px;
+	}	
+}
+
+@media only screen and (min-width: 1000px) {
+	.box.item{
+		width:280px;
+		height:280px;
+	}	
+}
+
+/* =============== PANIER ================
+   ======================================= */
+
+
+.orderquantite{
+	width:20px;
+	float:left;
+}
+
+.ordername{
+	float:left;
+	margin-left:40px;
+}
+
+.orderprix{
+	float:right;
+	width:80px;
+	text-align: right;
+}
+
+.total{
+	margin:20px 0 0 0;
+	font-size:1.4em;
+}
+
+
+/* =============== FORMS =================
+   ======================================= */
+
+form input[type='text'],
+form input[type='password']{
+	display:block;
+	width:100%;
+	margin:0 0 10px;
+	padding:4px 8px;
+	font-size:1.2em;
+	border:1px solid #dcdcdc;
+	border-radius: 4px;
+	font-weight: 300;
+}
+
+form input[type='submit']{
+	display:block;
+	width:100%;
+	color:#fff;
+	border:0;
+	background:#51B1CF;
+	cursor:pointer;
+	padding:8px;
+	border-radius: 4px;
+	margin:20px 0 0 0;
+}
+
+
+form input[type='submit']:hover{
+	background:#3E94AD;
+}
+
+
+
+/*ADMIN PAGE*/
+
+table{
+    border: 1px solid black;
+    border-collapse: collapse;
+	width: 100%;
+}
+
+tbody a{
+	display: block;
+}
+
+tr:hover
+{
+	background: rgba(50, 50, 50, 0.5);
+}
+
+th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 15px;
+    text-align: left;
+}
+
+.item-img{
+	width: 100px;
+	height: 100px;
+}
+
+.item-img > img{
+max-width:100%;
+max-height:100%;
+}

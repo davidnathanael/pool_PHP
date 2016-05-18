@@ -1,0 +1,61 @@
+<!doctype html>
+
+<html>
+	<head>
+		<meta charset="utf-8">
+
+		<title>Balloon</title>
+		<meta name="description" content="The HTML5 Herald">
+		<meta name="author" content="SitePoint">
+
+		<style type="text/css">
+			#balloon{
+				border-radius: 50%;
+				width: 200px;
+				height: 200px;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<div id="balloon" style="background-color: red;"></div>
+
+		<script>
+
+			var elem = document.getElementById('balloon');
+
+			elem.addEventListener('click', function() {
+					var width = this.clientWidth + 10;
+					var height = this.clientHeight + 10;
+					var color = this.style.backgroundColor;
+
+					this.style.width = (width <= 420 || height <= 420) ? width + 'px' : '200px';
+					this.style.height = (width <= 420 || height <= 420) ? height + 'px' : '200px';
+					this.style.backgroundColor = get_color(color, 'click');
+				});
+
+			elem.addEventListener('mouseout', function() {
+					var width = this.clientWidth - 5;
+					var height = this.clientHeight - 5;
+					var color = this.style.backgroundColor;
+
+					this.style.width = (width > 200 || height > 200) ? width + 'px' : '200px';
+					this.style.height = (width > 200 || height > 200) ? height + 'px' : '200px';
+					this.style.backgroundColor = get_color(color, 'exit');
+				});
+
+			function get_color(color, action)
+			{
+				if (color == 'red')
+					return (action == 'click') ? 'green' : 'blue';
+				else if (color == 'green')
+					return (action == 'click') ? 'blue' : 'red';
+				else if (color == 'blue')
+					return (action == 'click') ? 'red' : 'green';
+				else 
+					return 'red';
+			}
+		</script>
+	</body>
+</html>

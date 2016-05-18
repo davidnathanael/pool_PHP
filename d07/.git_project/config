@@ -1,0 +1,9 @@
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+	precomposeunicode = true
+[remote "vgs"]
+	url = vogsphere@vogsphere.42.fr:intra/2016/activities/piscine_php_d07/ddela-cr
+	fetch = +refs/heads/*:refs/remotes/vgs/*

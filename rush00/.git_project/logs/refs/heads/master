@@ -1,0 +1,8 @@
+0000000000000000000000000000000000000000 404e5de751581625168977de3ad09db21c9c4430 David Nathanael <ddela-cr@student.42.fr> 1460230616 +0200	clone: from vogsphere@vogsphere.42.fr:intra/2016/activities/piscine_php_rush00/ddela-cr2
+404e5de751581625168977de3ad09db21c9c4430 5980d0df53957dcb9787f09ea75df19485270457 David Nathanael <ddela-cr@student.42.fr> 1460231486 +0200	pull: Fast-forward
+5980d0df53957dcb9787f09ea75df19485270457 6ec2adff2866dcc71da6cdf0c0ca1759250203b9 David Nathanael <ddela-cr@student.42.fr> 1460233642 +0200	pull: Fast-forward
+6ec2adff2866dcc71da6cdf0c0ca1759250203b9 5f82db32a1648286bf144d8efc85d8faadfd5da0 David Nathanael <ddela-cr@student.42.fr> 1460235126 +0200	commit: login.php and install
+5f82db32a1648286bf144d8efc85d8faadfd5da0 c9f8568647d0b6e4e0dfb29d65567a2df2d4c0a7 David Nathanael <ddela-cr@student.42.fr> 1460235516 +0200	commit: Added error variables when redirected
+c9f8568647d0b6e4e0dfb29d65567a2df2d4c0a7 cf51c34b19f37a11695becd61f1ed42ebb75233f David Nathanael <ddela-cr@student.42.fr> 1460240131 +0200	commit: Admin page with table of users and item, install.php updated.
+cf51c34b19f37a11695becd61f1ed42ebb75233f 344632212c385e504e40cf7a7379347a08259e2f David Nathanael <ddela-cr@student.42.fr> 1460240647 +0200	pull: Fast-forward
+344632212c385e504e40cf7a7379347a08259e2f 01cd14181110e774477831f8356e8f2c3ec724fa David Nathanael <ddela-cr@student.42.fr> 1460374309 +0200	pull: Fast-forward

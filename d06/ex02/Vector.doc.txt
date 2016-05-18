@@ -1,0 +1,21 @@
+<- Vector ----------------------------------------------------------------------
+The Vector class handles vectors.
+
+Constructor expects an array with the following keys:
+
+	- 'dest' : 	Destination Vertex of the vector, mandatory.
+	- 'orig' : 	Origin Vertex of the vector, optional.
+				If not provided, it is a Vertex with x, y, z = 0.
+
+Methods
+
+	- magnitude() : returns the norm of the vector.
+	- normalize() : returns an normalized instance of the vector.
+					or a clone if vector is already normalized.
+	- add(Vector $rhs) : returns the sum of the two vectors.
+	- sub(Vector $rhs) : returns the difference of the two vectors.
+	- scalarProduct($k) : returns the product with a scalar.
+	- dotProduct(Vector $rhs) : returns the scalar product of the two vectors.
+	- crossProduct(Vector $rhs) : returns the cross product of the two vectors.
+
+---------------------------------------------------------------------- Vector ->
